@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ePortfolio dự án Cơ sở dữ liệu – Quản lý thư viện, Nhóm 1, 20/10–28/10/2026">
+  <title>ePortfolio | Quản lý thư viện — Nhóm 1</title>
+  <style>
+    :root{--ink:#172b3a;--muted:#627484;--paper:#f4f7f8;--card:#fff;--line:#dce5e8;--teal:#087f78;--teal-soft:#e4f4f1;--gold:#edb64b;--navy:#123147;--warn:#fff5dc;--warn-ink:#755215;--shadow:0 12px 34px rgba(21,51,67,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 Inter,"Segoe UI",Arial,sans-serif}
+    a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}.hero{background:var(--navy);color:#fff;padding:26px 0 54px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:440px;height:440px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-70px;top:-260px;box-shadow:0 0 0 45px rgba(255,255,255,.035),0 0 0 90px rgba(255,255,255,.025)}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:16px;position:relative;z-index:1}.brand{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#b9d7df;font-weight:700}.nav{display:flex;gap:20px;font-size:13px;color:#d1e2e7}.nav a{text-decoration:none}.nav a:hover{text-decoration:underline}.hero-main{position:relative;z-index:1;padding-top:55px;max-width:760px}.eyebrow{color:#7dd2c5;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:12px}.hero h1{font-size:clamp(36px,6vw,66px);line-height:1.05;letter-spacing:-.04em;margin:14px 0 18px}.hero p{max-width:660px;color:#d2e1e5;font-size:18px;margin:0}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}.chip{border:1px solid rgba(255,255,255,.24);padding:7px 12px;border-radius:999px;font-size:13px;color:#e2edf0}.hero-foot{font-size:12px;color:#abc5cc;margin-top:18px}
+    main{padding:0 0 64px}.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:-28px;position:relative;z-index:2}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.stat{padding:20px 22px}.stat strong{display:block;font-size:26px;line-height:1.2;color:var(--teal)}.stat span{font-size:13px;color:var(--muted)}
+    section{padding-top:44px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:17px}.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--teal);font-weight:800}.section-head h2{font-size:27px;line-height:1.2;letter-spacing:-.025em;margin:5px 0 0}.section-head p{margin:0;color:var(--muted);font-size:13px;max-width:450px;text-align:right}
+    .notice{background:var(--warn);color:var(--warn-ink);border:1px solid #f1d890;border-radius:12px;padding:13px 16px;font-size:13px;margin:20px 0 0}.notice strong{font-weight:800}.team{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.person{padding:22px;display:grid;grid-template-columns:50px 1fr;gap:15px;align-items:start}.avatar{width:48px;height:48px;background:var(--teal-soft);color:var(--teal);border-radius:14px;display:grid;place-items:center;font-weight:800}.person h3{font-size:17px;margin:0 0 2px}.id{font-size:12px;color:var(--muted)}.role{display:inline-block;background:#edf3f5;padding:4px 9px;border-radius:99px;font-size:11px;font-weight:700;margin:9px 0}.person p{margin:5px 0 0;font-size:14px;color:#425866}.task-table{overflow:hidden}.task-table table{border-collapse:collapse;width:100%;font-size:14px}.task-table th,.task-table td{text-align:left;padding:14px 16px;vertical-align:top;border-bottom:1px solid var(--line)}.task-table th{background:#f2f7f7;color:#526878;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.task-table tr:last-child td{border-bottom:0}.tag{display:inline-block;padding:4px 8px;border-radius:99px;background:var(--teal-soft);color:#076a64;font-size:11px;font-weight:700;white-space:nowrap}
+    .timeline{position:relative;padding:4px 0 0 24px}.timeline:before{content:"";position:absolute;left:7px;top:12px;bottom:12px;width:2px;background:#cfe1df}.day{position:relative;padding:0 0 16px 18px}.day:before{content:"";position:absolute;left:-23px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--teal);border:3px solid var(--paper);box-shadow:0 0 0 2px #9bcac5}.day-card{padding:17px 20px;display:grid;grid-template-columns:115px 1fr;gap:18px}.date{font-weight:800;color:var(--teal);font-size:15px}.date small{display:block;color:var(--muted);font-weight:500;font-size:12px}.day-card h3{font-size:16px;margin:0 0 5px}.day-card p{font-size:14px;color:#506574;margin:0}.owners{margin-top:9px;font-size:12px;color:var(--muted)}.evidence{margin-top:10px;border-top:1px dashed var(--line);padding-top:9px;color:#6a7b85;font-size:12px}.evidence b{color:#435965}
+    .evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.evidence-card{padding:20px}.evidence-card .icon{font-size:20px;color:var(--teal);font-weight:800}.evidence-card h3{font-size:15px;margin:9px 0 5px}.evidence-card p{margin:0;color:var(--muted);font-size:13px}.placeholder{display:inline-block;margin-top:14px;border:1px dashed #aab9bd;border-radius:8px;padding:7px 10px;font-size:11px;color:#687a83}
+    .reflection{padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.reflection h3{font-size:16px;margin:0 0 7px}.reflection p{font-size:14px;color:#506574;margin:0}.reflection .prompt{color:#778790;font-style:italic}.footer{margin-top:44px;border-top:1px solid var(--line);padding-top:18px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:15px}
+    @media(max-width:760px){.nav{display:none}.summary{grid-template-columns:1fr}.team,.evidence-grid{grid-template-columns:1fr}.section-head{display:block}.section-head p{text-align:left;margin-top:8px}.task-table{overflow-x:auto}.task-table table{min-width:650px}.day-card{grid-template-columns:1fr;gap:5px}.reflection{grid-template-columns:1fr}.hero-main{padding-top:40px}.footer{display:block}.footer span{display:block;margin-top:6px}}
+    @media print{body{background:#fff}.hero{padding:20px 0 36px}.hero:after,.nav{display:none}.wrap{width:100%}.summary{margin-top:18px}.stat,.card{box-shadow:none;break-inside:avoid}section{padding-top:25px}.day{break-inside:avoid}.notice{break-inside:avoid}.footer{margin-top:20px}}
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="wrap">
+      <div class="top"><div class="brand">ePortfolio · Cơ sở dữ liệu</div><nav class="nav" aria-label="Điều hướng"><a href="#nhom">Nhóm</a><a href="#phancong">Phân công</a><a href="#nhatky">Nhật ký</a><a href="#minhchung">Minh chứng</a></nav></div>
+      <div class="hero-main">
+        <div class="eyebrow">Dự án học phần · Nhóm 1</div>
+        <h1>Quản lý<br>thư viện</h1>
+        <p>Nhật ký dự án ghi lại phân công, tiến trình công việc và minh chứng cần hoàn thiện cho đề tài xây dựng cơ sở dữ liệu quản lý thư viện.</p>
+        <div class="chips"><span class="chip">20–28 tháng 10, 2026</span><span class="chip">Phan Thị Ngọc Duyên</span><span class="chip">Tống Ngọc Minh Châu</span></div>
+        <div class="hero-foot">Học phần Cơ sở dữ liệu (111166) · Trường Đại học Lạc Hồng</div>
+      </div>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="summary" aria-label="Tóm tắt dự án">
+      <div class="stat"><strong>9 ngày</strong><span>Khoảng thời gian dự án · 20/10–28/10/2026</span></div>
+      <div class="stat"><strong>2 thành viên</strong><span>Nhóm thực hiện theo danh sách trong báo cáo</span></div>
+      <div class="stat"><strong>5 mảng việc</strong><span>Phân tích, mô hình hóa, SQL, truy vấn và hoàn thiện</span></div>
+    </div>
+    <div class="notice"><strong>Lưu ý về tính xác thực:</strong> Bảng phân công trong báo cáo nêu nhiệm vụ và mức hoàn thành 100%, nhưng không ghi nhật ký theo từng ngày hoặc minh chứng cụ thể. Vì vậy, lịch dưới đây là bản nháp khung thời gian gợi ý trong phạm vi 20/10–28/10; nhóm cần chỉnh theo hoạt động thực tế và bổ sung minh chứng trước khi nộp.</div>
+
+    <section id="nhom">
+      <div class="section-head"><div><div class="kicker">01 · Thành viên</div><h2>Nhóm thực hiện</h2></div><p>Thông tin tên, mã số sinh viên và vai trò được lấy từ bảng thành viên trong báo cáo.</p></div>
+      <div class="team">
+        <article class="card person"><div class="avatar">ND</div><div><h3>Phan Thị Ngọc Duyên</h3><div class="id">MSSV 426000035</div><span class="role">Nhóm trưởng</span><p>Phân tích nghiệp vụ, tổng hợp báo cáo, điều phối kiểm thử; tạo script SQL, dữ liệu giả lập và kiểm thử ràng buộc toàn vẹn.</p></div></article>
+        <article class="card person"><div class="avatar">MC</div><div><h3>Tống Ngọc Minh Châu</h3><div class="id">MSSV 426000034</div><span class="role">Thành viên</span><p>Thiết kế ERD/PDM, kiểm tra khóa và quan hệ; thực hiện truy vấn, đại số quan hệ, ảnh kết quả và rà soát.</p></div></article>
+      </div>
+    </section>
+
+    <section id="phancong">
+      <div class="section-head"><div><div class="kicker">02 · Phạm vi công việc</div><h2>Phân công theo báo cáo</h2></div><p>Nội dung dưới đây bám sát bảng “Phân công và mức độ đóng góp” trong tài liệu.</p></div>
+      <div class="card task-table"><table><thead><tr><th>Thành viên</th><th>Nhiệm vụ được phân công</th><th>Hoàn thành</th><th>Tự đánh giá</th></tr></thead><tbody>
+        <tr><td><strong>Phan Thị Ngọc Duyên</strong></td><td>Phân tích nghiệp vụ; tổng hợp báo cáo; điều phối kiểm thử.</td><td><span class="tag">100%*</span></td><td>100%*</td></tr>
+        <tr><td><strong>Tống Ngọc Minh Châu</strong></td><td>Mô hình ERD/PDM; kiểm tra khóa và quan hệ.</td><td><span class="tag">100%*</span></td><td>100%*</td></tr>
+        <tr><td><strong>Phan Thị Ngọc Duyên</strong></td><td>Tạo script SQL, dữ liệu giả lập và kiểm thử RBTV.</td><td><span class="tag">100%*</span></td><td>100%*</td></tr>
+        <tr><td><strong>Tống Ngọc Minh Châu</strong></td><td>Truy vấn, đại số quan hệ, ảnh kết quả và rà soát.</td><td><span class="tag">100%*</span></td><td>100%*</td></tr>
+        <tr><td><strong>Ngọc Duyên &amp; Minh Châu</strong></td><td>Tài liệu tham khảo, slide, ePortfolio và tự kiểm rubric.</td><td><span class="tag">100%*</span></td><td>100%*</td></tr>
+      </tbody></table></div>
+      <div class="hero-foot" style="color:#687a83;margin-top:10px">* Mức phần trăm được chép theo bảng phân công trong tài liệu; nhóm nên xác nhận lại và thống nhất cách hiểu trước khi nộp.</div>
+    </section>
+
+    <section id="nhatky">
+      <div class="section-head"><div><div class="kicker">03 · Nhật ký dự án</div><h2>Khung tiến trình 20/10–28/10</h2></div><p>Các ngày được phân bổ để hỗ trợ ghi nhật ký; không khẳng định là lịch sử sự kiện đã diễn ra.</p></div>
+      <div class="timeline">
+        <article class="day"><div class="card day-card"><div class="date">20/10/2026<small>Thứ Ba · Khởi động</small></div><div><h3>Chốt đề tài và chia đầu việc</h3><p>Ghi lại mục tiêu dự án, phạm vi hệ thống thư viện, cách phối hợp và phân công ban đầu.</p><div class="owners">Phụ trách: Cả nhóm</div><div class="evidence"><b>Nhật ký thực tế:</b> Bổ sung thời gian họp, người tham gia, quyết định đã thống nhất và liên kết ghi chú nếu có.</div></div></div></article>
+        <article class="day"><div class="card day-card"><div class="date">21/10/2026<small>Phân tích</small></div><div><h3>Phân tích nghiệp vụ và quy tắc dữ liệu</h3><p>Làm rõ danh mục, bản sách, độc giả, mượn–trả, tiền phạt và các ràng buộc chính.</p><div class="owners">Phụ trách: Phan Thị Ngọc Duyên · phối hợp: Tống Ngọc Minh Châu</div><div class="evidence"><b>Minh chứng nên gắn:</b> Bản mô tả nghiệp vụ, danh sách quy tắc và ghi chú các quyết định thiết kế.</div></div></div></article>
+        <article class="day"><div class="card day-card"><div class="date">22/10/2026<small>Mô hình hóa</small></div><div><h3>Xây dựng và rà soát ERD</h3><p>Xác định thực thể, thuộc tính, khóa và quan hệ; chú ý quan hệ nhiều–nhiều sách–tác giả và phiếu–bản sách.</p><div class="owners">Phụ trách: Tống Ngọc Minh Châu · rà soát nghiệp vụ: Phan Thị Ngọc Duyên</div><div class="evidence"><b>Minh chứng nên gắn:</b> Ảnh hoặc tệp ERD, phiên bản/ngày chỉnh sửa và nhận xét rà soát.</div></div></div></article>
+        <article class="day"><div class="card day-card"><div class="date">23/10/2026<small>Thiết kế quan hệ</small></div><div><h3>Chuyển đổi mô hình quan hệ, khóa và miền giá trị</h3><p>Kiểm tra khóa chính/ngoại, miền dữ liệu và tính nhất quán giữa ERD với mô hình quan hệ.</p><div class="owners">Phụ trách: Tống Ngọc Minh Châu</div><div class="evidence"><b>Minh chứng nên gắn:</b> Sơ đồ PDM hoặc lược đồ quan hệ, danh sách khóa và các điểm cần đối chiếu.</div></div></div></article>
+        <article class="day"><div class="card day-card"><div class="date">24/10/2026<small>Triển khai SQL</small></div><div><h3>Tạo script và dữ liệu giả lập</h3><p>Soạn lệnh tạo cơ sở dữ liệu, bảng và dữ liệu thử; ghi rõ trạng thái chạy thực tế của script.</p><div class="owners">Phụ trách: Phan Thị Ngọc Duyên</div><div class="evidence"><b>Minh chứng nên gắn:</b> Tệp .sql, ảnh chạy trên SQL Server và lỗi/điều chỉnh (nếu có).</div></div></div></article>
+        <article class="day"><div class="card day-card"><div class="date">25/10/2026<small>Ràng buộc</small></div><div><h3>Kiểm thử ràng buộc toàn vẹn</h3><p>Rà soát CHECK, khóa, quan hệ và logic liên bảng; ghi nhận ca kiểm thử đạt/chưa đạt thay vì chỉ ghi kết luận.</p><div class="owners">Phụ trách: Phan Thị Ngọc Duyên · phối hợp rà soát: cả nhóm</div><div class="evidence"><b>Minh chứng nên gắn:</b> Bảng ca kiểm thử, kết quả chạy và ảnh chụp liên quan.</div></div></div></article>
+        <article class="day"><div class="card day-card"><div class="date">26/10/2026<small>Truy vấn</small></div><div><h3>Viết truy vấn và biểu thức đại số quan hệ</h3><p>Hoàn thiện truy vấn theo nhóm yêu cầu, kiểm tra kết quả và ghi chú các truy vấn cần chạy xác nhận.</p><div class="owners">Phụ trách: Tống Ngọc Minh Châu</div><div class="evidence"><b>Minh chứng nên gắn:</b> Tệp truy vấn, ảnh kết quả thực thi và nhận xét từng nhóm truy vấn.</div></div></div></article>
+        <article class="day"><div class="card day-card"><div class="date">27/10/2026<small>Tổng hợp</small></div><div><h3>Rà soát báo cáo, tài liệu và rubric</h3><p>Đối chiếu các chương, kiểm tra tính nhất quán thuật ngữ, tài liệu tham khảo, phần còn thiếu và slide (nếu có).</p><div class="owners">Phụ trách: Cả nhóm · tổng hợp: Phan Thị Ngọc Duyên</div><div class="evidence"><b>Minh chứng nên gắn:</b> Danh sách rà soát, góp ý và thay đổi thực tế sau rà soát.</div></div></div></article>
+        <article class="day"><div class="card day-card"><div class="date">28/10/2026<small>Chốt dự án</small></div><div><h3>Đóng gói sản phẩm và kiểm tra lần cuối</h3><p>Kiểm tra bộ tệp bàn giao và ghi nhận trạng thái nộp thực tế, các mục còn chờ xác nhận.</p><div class="owners">Phụ trách: Cả nhóm</div><div class="evidence"><b>Minh chứng nên gắn:</b> Danh sách tệp cuối, ngày nộp và xác nhận tiếp nhận (nếu có).</div></div></div></article>
+      </div>
+    </section>
+
+    <section id="minhchung">
+      <div class="section-head"><div><div class="kicker">04 · Tư liệu dự án</div><h2>Minh chứng cần bổ sung</h2></div><p>Thay các ô gợi ý bằng liên kết tệp hoặc ảnh thật của nhóm; không dùng minh chứng chưa được xác nhận.</p></div>
+      <div class="evidence-grid">
+        <article class="card evidence-card"><div class="icon">01</div><h3>Mô hình dữ liệu</h3><p>ERD/PDM, lịch sử chỉnh sửa hoặc nhận xét giữa các thành viên.</p><span class="placeholder">[Thêm liên kết ERD/PDM]</span></article>
+        <article class="card evidence-card"><div class="icon">02</div><h3>SQL và kiểm thử</h3><p>Script, dữ liệu giả lập, ca kiểm thử RBTV và kết quả thực thi.</p><span class="placeholder">[Thêm liên kết script/ảnh]</span></article>
+        <article class="card evidence-card"><div class="icon">03</div><h3>Báo cáo và bàn giao</h3><p>Bản báo cáo, slide (nếu có), tự kiểm rubric và xác nhận nộp.</p><span class="placeholder">[Thêm liên kết tệp cuối]</span></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head"><div><div class="kicker">05 · Tự đánh giá</div><h2>Phản tư sau dự án</h2></div><p>Phần này cần do thành viên tự viết dựa trên trải nghiệm và công việc thực tế.</p></div>
+      <div class="card reflection"><div><h3>Điều nhóm học được</h3><p class="prompt">[Bổ sung: kiến thức về mô hình hóa, khóa/ràng buộc, truy vấn hoặc phối hợp nhóm mà thành viên thực sự rút ra.]</p></div><div><h3>Khó khăn và hướng cải thiện</h3><p class="prompt">[Bổ sung: vấn đề đã gặp, cách xử lý thực tế, phần còn hạn chế và việc nhóm sẽ làm khác đi.]</p></div></div>
+    </section>
+    <footer class="footer"><span>Nhóm 1 · Cơ sở dữ liệu (111166) · Quản lý thư viện</span><span>Thời gian dự án: 20/10–28/10/2026 · Cập nhật: 28/10/2026</span></footer>
+  </main>
+</body>
+</html>
